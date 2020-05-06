@@ -87,7 +87,7 @@ namespace MassTransitTest
 
             logger.LogInformation(".... Do something 2");
 
-            await publishEndpoint.Publish<SomeEvent1>(new { });
+            await publishEndpoint.Publish<SomeEvent1>(new { }); // <----- this is published right away
 
             logger.LogInformation(".... Do something 3");
         }
